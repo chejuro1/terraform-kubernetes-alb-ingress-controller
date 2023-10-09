@@ -249,6 +249,8 @@ resource "kubernetes_cluster_role" "this" {
     api_groups = [
       "",
       "extensions",
+      "elbv2.k8s.aws",
+      "networking.k8s.io",
     ]
 
     resources = [
@@ -258,6 +260,8 @@ resource "kubernetes_cluster_role" "this" {
       "ingresses",
       "ingresses/status",
       "services",
+      "targetgroupbindings",
+      "ingressclasses",
     ]
 
     verbs = [
